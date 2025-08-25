@@ -59,8 +59,8 @@ export default function FormSection() {
                                 </button>
                             </div>
                             <form className="flex flex-col gap-4 p-6 rounded" onSubmit={handleSubmit}>
-                                <input type="text" id="name" value={name} onChange={(e)=> setName(e.target.value)} placeholder="Seu nome" aria-label="Seu nome" className="p-2 rounded text-[#121212] border-2 [#131313] focus:ring-2 focus:ring-[#FF00F2]" />
-                                <input type="email" id="email" value={email} onChange={(e)=> setEmail(e.target.value)} placeholder="Seu email" aria-label="Seu email" className="p-2 rounded text-[#121212] border-2 [#131313] focus:ring-2 focus:ring-[#FF00F2]"/>
+                                <input required type="text" id="name" value={name} onChange={(e)=> setName(e.target.value)} placeholder="Seu nome" aria-label="Seu nome" className="p-2 rounded text-[#121212] border-2 [#131313] focus:ring-2 focus:ring-[#FF00F2]" />
+                                <input required type="email" id="email" value={email} onChange={(e)=> setEmail(e.target.value)} placeholder="Seu email" aria-label="Seu email" className="p-2 rounded text-[#121212] border-2 [#131313] focus:ring-2 focus:ring-[#FF00F2]"/>
                                 <input type="text" id="message" value={message} onChange={(e)=> setMessage(e.target.value)} placeholder="Sua mensagem" aria-label="Sua mensagem" className="p-2 rounded text-[#121212] border-2 [#131313] focus:ring-2 focus:ring-[#FF00F2]"/>
                                 <Button disabled={btnLoading} type="submit">Enviar</Button>
                                 {returnReq && (
