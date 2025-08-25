@@ -31,7 +31,7 @@ module.exports = {
         fadeIn: "fadeIn 1s ease forwards",
         fadeOut: "fadeOut 1s ease forwards",
         slideUp: "slideUp 1s ease forwards",
-        slideLeft: "slideLeft 1s ease forwards",
+        slideLeft: "slideLeft 3s ease forwards",
         zoomIn: "zoomIn 0.8s ease forwards",
       },
     },
