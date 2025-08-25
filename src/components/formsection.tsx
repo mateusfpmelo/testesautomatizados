@@ -48,11 +48,11 @@ export default function FormSection() {
                 <h2 className="text-xl font-bold opacity-0 animate-zoomIn">Preencha o <span className="text-[#B727F5]">Formulário</span></h2>
                 <p>Este projeto é uma mini landing page criada para demonstrar o uso de testes automatizados em um ambiente React + TypeScript + Tailwind. O objetivo é mostrar como aplicar boas práticas de <b>qualidade de software</b>.</p>
                 {!showForm ? (
-                    <div><Button children="Abrir formulário" onClick={() => setShowForm(true)} /></div>
+                    <div className="pt-4"><Button children="Abrir formulário" onClick={() => setShowForm(true)} /></div>
                     ) : (
                         <>
 
-                            <div className="w-full flex justify-end">
+                            <div className="w-full flex justify-end pt-4">
                                 <button
                                     onClick={() => setShowForm(false)} aria-label="Fechar formulário" className="rounded-full bg-[#C7C7C7] hover:bg-gray-800 focus:outline-none focus:ring-2 " >
                                     <X className="w-6 h-6 text-[#131313] hover:text-[#fff]" />
@@ -62,7 +62,7 @@ export default function FormSection() {
                                 <input required type="text" id="name" value={name} onChange={(e)=> setName(e.target.value)} placeholder="Seu nome" aria-label="Seu nome" className="p-2 rounded text-[#121212] border-2 [#131313] focus:ring-2 focus:ring-[#FF00F2]" />
                                 <input required type="email" id="email" value={email} onChange={(e)=> setEmail(e.target.value)} placeholder="Seu email" aria-label="Seu email" className="p-2 rounded text-[#121212] border-2 [#131313] focus:ring-2 focus:ring-[#FF00F2]"/>
                                 <input type="text" id="message" value={message} onChange={(e)=> setMessage(e.target.value)} placeholder="Sua mensagem" aria-label="Sua mensagem" className="p-2 rounded text-[#121212] border-2 [#131313] focus:ring-2 focus:ring-[#FF00F2]"/>
-                                <Button disabled={btnLoading} type="submit">Enviar</Button>
+                                <div className="pt-4"><Button disabled={btnLoading} type="submit">Enviar</Button></div>
                                 {returnReq && (
                                     <div className="w-full flex justify-start">
                                         <div
